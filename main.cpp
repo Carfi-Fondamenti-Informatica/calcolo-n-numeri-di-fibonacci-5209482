@@ -1,17 +1,21 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int n=0;
+    int n=0, primo=1, secondo=1, terzo=0;
+    cout<<"inserisci numero"<<endl;
     cin>>n;
-    if (n>=2){
-        int risultato, primo=1, secondo=0;
-        for(int i=1;i<=n;i++){
-            risultato=primo+secondo;
+    if(n>=2){
+        cout<<primo<<endl;
+        cout<<secondo<<endl;
+        for(int i=2;i<n;i++){
+            terzo=primo+secondo;
             primo=secondo;
-            secondo=risultato;
-            cout<<risultato<<endl;
+            secondo=terzo;
+            cout<<terzo<<endl;
         }
-    }else{
+    }
+    else{
         cout<<"errore"<<endl;
     }
     return 0;
+}
